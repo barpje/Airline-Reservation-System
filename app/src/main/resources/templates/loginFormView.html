@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen"  th:href="@{/index.css}"/>
+    <title>ARS</title>
+</head>
+<body>
+<ul>
+    <li><a href="/flights/cities/form">Wyszukaj loty</a></li>
+    <li><a href="/flights/city/form">Wyszukaj wszystkie loty z miasta</a></li>
+    <li><a href="/flights/airline/form">Wyszukaj loty danej linii</a></li>
+    <li><a href="/info-flight/form">Informacje o locie</a></li>
+    <li style="float:right"><a href="/registration" class="active">Załóż konto</a></li>
+    <li style="float:right"><a href="/login" class="active" >Zaloguj</a></li>
+</ul>
+<div id="login_form">
+    <form th:action="@{/login}"  method="post">
+        <label for="em">Adres email</label>
+        <input type="text" id="em" class="form-control" name="email" >
+
+        <label for="pas">Hasło</label>
+        <input type="password" id="pas"  class="form-control" name="password">
+        <input type="submit" value="Zaloguj">
+    </form>
+</div>
+<footer>&copy; Copyright 2021 Bartosz Piętka</footer>
+</body>
+</html>

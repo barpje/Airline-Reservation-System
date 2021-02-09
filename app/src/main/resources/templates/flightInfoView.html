@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" th:href="@{/index.css}" />
+    <title>ARS</title>
+</head>
+<body>
+<ul>
+    <li><a href="/flights/cities/form">Wyszukaj loty</a></li>
+    <li><a href="/flights/city/form">Wyszukaj wszystkie loty z miasta</a></li>
+    <li><a href="/flights/airline/form">Wyszukaj loty danej linii</a></li>
+    <li><a href="/info-flight/form">Informacje o locie</a></li>
+    <li style="float:right"><a href="/registration" class="active">Załóż konto</a></li>
+    <li style="float:right"><a href="/login" class="active" >Zaloguj</a></li>
+</ul>
+
+<table>
+    <thead>
+    <tr>
+        <td>Lotnisko startowe</td>
+        <td>Lotnisko docelowe</td>
+        <td>Data odlotu</td>
+        <td>Czas lotu</td>
+        <td>Linia lotnicza</td>
+        <td>Rejestracja samolotu</td>
+        <td>Producent samolotu</td>
+        <td>Model</td>
+        <td>Liczba miejsc</td>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="flight:${flights}">
+        <td th:text="${flight.startAirport}"></td>
+        <td th:text="${flight.stopAirport}"></td>
+        <td th:text="${flight.arrTime}"></td>
+        <td th:text="${flight.time}"></td>
+        <td th:text="${flight.airline}"></td>
+        <td th:text="${flight.register}"></td>
+        <td th:text="${flight.manufacturer}"></td>
+        <td th:text="${flight.model}"></td>
+        <td th:text="${flight.seatsNumber}"></td>
+
+    </tr>
+    </tbody>
+</table>
+<footer>&copy; Copyright 2021 Bartosz Piętka</footer>
+</body>
+</html>

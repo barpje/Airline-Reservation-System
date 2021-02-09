@@ -1,0 +1,127 @@
+body{
+	font-family: Montserrat,sans-serif;
+	font-weight: 250;
+	font-size: 16px;
+	text-align: center;
+	position: relative;
+
+}
+html {
+  background: url(background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100%;
+  overflow-y: scroll;
+}
+
+a:link {
+  color: white;
+}
+button.button{
+  background-color:#313131;
+  border: white;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+li > ul{
+    display: none;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li:hover > ul{
+    display: block;
+}
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color:  #253d8b;
+}
+
+footer{
+  bottom: 0;
+  padding: 3px;
+  color: white;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color:  #253d8b;;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:  #253d8b;;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+table{
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  background-color:  #253d8b;;
+  color: white;
+}
+
+thead {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #333;
+  color: white;
+}

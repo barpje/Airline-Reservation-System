@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen"  th:href="@{/index.css}"/>
+    <title>ARS</title>
+</head>
+<body>
+<ul>
+    <li onclick><a href="/user/flights/form">Zarezerwuj lot</a></li>
+    <li onclick><a href="/user/reservations">Moje rezerwacje</a></li>
+    <li style="float:right"><a href="/logout" class="active" >Wyloguj</a></li>
+</ul>
+<table>
+    <thead>
+    <tr>
+        <td>Numer rezerwacji</td>
+        <td>Kod lotu</td>
+        <td>Lotnisko odlotu</td>
+        <td>Lotnisko docelowe</td>
+        <td>Data odlotu</td>
+        <td>Imię</td>
+        <td>Nazwisko</td>
+        <td>Klasa podróży</td>
+        <td>Status rezerwacji</td>
+        <td>Data rezerwacji</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="reservation:${reservations}">
+        <td th:text="${reservation.id}"></td>
+        <td th:text="${reservation.flight_code}"></td>
+        <td th:text="${reservation.startAirport}"></td>
+        <td th:text="${reservation.endAirport}"></td>
+        <td th:text="${reservation.departureTime}"></td>
+        <td th:text="${reservation.name}"></td>
+        <td th:text="${reservation.surname}"></td>
+        <td th:text="${reservation.travel_class}"></td>
+        <td th:text="${reservation.status}"></td>
+        <td th:text="${reservation.date}"></td>
+        <td ><a th:href="@{'/user/return-ticket?idReservation='+${reservation.id}+'&idFlight='+${reservation.idFlight}}">Dodaj bilet powrotny</a></td>
+
+    </tr>
+    </tbody>
+</table>
+<footer>&copy; Copyright 2021 Bartosz Piętka</footer>
+</body>
+</html>

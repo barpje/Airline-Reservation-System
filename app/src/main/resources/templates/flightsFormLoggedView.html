@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen"  th:href="@{/index.css}"/>
+    <title>ARS</title>
+</head>
+<body>
+<ul>
+    <li onclick><a href="/user/flights/form">Zarezerwuj lot</a></li>
+    <li onclick><a href="/user/reservations">Moje rezerwacje</a></li>
+    <li style="float:right"><a href="/logout" class="active" >Wyloguj</a></li>
+</ul>
+<div id="search_form">
+    <form action="/user/flights">
+        <label for="s_city">Miasto startowe</label>
+        <input type="text" id="s_city" name="start_city" placeholder=
+                "Kraków, Warszawa, Amsterdam, Frankfurt, Londyn, Los Angeles, Singapur">
+
+        <label for="e_city">Miasto docelowe</label>
+        <input type="text" id="e_city" name="end_city" placeholder=
+                "Kraków, Warszawa, Amsterdam, Frankfurt, Londyn, Los Angeles, Singapur">
+        <input type="submit" value="Szukaj lotów">
+    </form>
+</div>
+
+<footer>&copy; Copyright 2021 Bartosz Piętka</footer>
+</body>
+</html>

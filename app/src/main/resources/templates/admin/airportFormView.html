@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen"  th:href="@{/index.css}"/>
+    <title>ARS</title>
+<body>
+<ul>
+    <li><a>Dane z tabel</a>
+        <ul class="level2">
+            <li><a href="/admin/view/country">Państwo</a></li>
+            <li><a href="/admin/view/city">Miasto</a></li>
+            <li><a href="/admin/view/manufacturer">Producent</a></li>
+            <li><a href="/admin/view/plane">Samolot</a></li>
+            <li><a href="/admin/view/model">Model</a></li>
+            <li><a href="/admin/view/flight">Lot</a></li>
+            <li><a href="/admin/view/airport">Lotnisko</a></li>
+            <li><a href="/admin/view/airline">Linia lotnicza</a></li>
+            <li><a href="/admin/view/account">Konto</a></li>
+            <li><a href="/admin/view/passenger">Pasażer</a></li>
+            <li><a href="/admin/view/ticket">Bilet</a></li>
+            <li><a href="/admin/view/reservation">Rezerwacja</a></li>
+
+        </ul>
+    </li>
+    <li onclick><a>Dodaj dane do tabel</a>
+        <ul class="level2">
+            <li><a href="/admin/insert/country">Państwo</a></li>
+            <li><a href="/admin/insert/city">Miasto</a></li>
+            <li><a href="/admin/insert/manufacturer">Producent</a></li>
+            <li><a href="/admin/insert/plane">Samolot</a></li>
+            <li><a href="/admin/insert/model">Model</a></li>
+            <li><a href="/admin/insert/flight">Lot</a></li>
+            <li><a href="/admin/insert/airport">Lotnisko</a></li>
+            <li><a href="/admin/insert/airline">Linia lotnicza</a></li>
+        </ul>
+    </li>
+    <li><a href="/admin/delete-user">Usuń użytkownika</a></li>
+    <li style="float:right"><a href="/logout" class="active" >Wyloguj</a></li>
+</ul>
+<div>
+    <form method="POST" action="/admin/insert/add_airport">
+        <label for="name">Nazwa lotniska</label>
+        <input type="text" id="name" name="name" placeholder="">
+        <label for="c">Kod lotniska</label>
+        <input type="text" id="c" name="code" placeholder="">
+        <label for="cc">id_miasto</label>
+        <input type="text" id="cc" name="idCity" placeholder="">
+        <input type="submit" value="Dodaj rekord">
+    </form>
+</div>
+<footer>&copy; Copyright 2021 Bartosz Piętka</footer>
+</body>
+</html>
