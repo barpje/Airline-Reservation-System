@@ -1,7 +1,7 @@
 # Airline-Reservation-System
 University database project 
 
-Technologies:
+Technologies:\
 -Spring Boot: MVC, JDBC\
 -Thymeleaf\
 -Spring Security\
