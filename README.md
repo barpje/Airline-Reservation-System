@@ -8,4 +8,4 @@ Technologies:
 -PostgreSQL\
 
 Website and documentation is written in polish\
-[a link](http://ars-env-2.eba-95hxk22h.us-east-2.elasticbeanstalk.com/)
+[Website](http://ars-env-2.eba-95hxk22h.us-east-2.elasticbeanstalk.com/)
